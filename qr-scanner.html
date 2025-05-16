@@ -84,7 +84,7 @@
         color: #eab308;
         border: 1px solid #eab308;
       }
-      /* Add to your existing CSS */
+      
       #result-container {
         transition: all 0.3s ease;
       }
@@ -124,6 +124,8 @@
             <div id="scan-id" class="font-medium"></div>
             <div class="text-gray-400">Name:</div>
             <div id="scan-name" class="font-medium"></div>
+            <div class="text-gray-400">Type:</div>
+            <div id="scan-type" class="font-medium"></div>
           </div>
           <button id="confirm-btn" class="btn-scan mt-4">
             Confirm Attendance
@@ -287,6 +289,14 @@
         // First show the ID while we fetch additional details
         document.getElementById("scan-id").textContent = data;
         document.getElementById("scan-name").textContent = "Loading...";
+        
+        // Determine participant type based on ID prefix
+        let participantType = "";
+        if (data.startsWith("ESU")) participantType = "Student";
+        else if (data.startsWith("EJO")) participantType = "Job Seeker";
+        else if (data.startsWith("ESP")) participantType = "Sponsor";
+        document.getElementById("scan-type").textContent = participantType;
+        
         resultContainer.classList.remove("hidden");
 
         // Fetch participant details from the server
@@ -303,9 +313,7 @@
 
               if (result.alreadyCheckedIn) {
                 showStatus(
-                  `${result.name} already checked in at ${new Date(
-                    result.timestamp
-                  ).toLocaleString()}`,
+                  `${result.name} already checked in at ${formatTimestamp(result.timestamp)}`,
                   "already-checked"
                 );
               } else {
@@ -326,6 +334,17 @@
               "error"
             );
           });
+      }
+
+      // Format timestamp for display
+      function formatTimestamp(timestamp) {
+        if (!timestamp) return "unknown time";
+        try {
+          const date = new Date(timestamp);
+          return date.toLocaleString();
+        } catch (e) {
+          return timestamp;
+        }
       }
 
       // Update the confirmation handler
@@ -371,17 +390,12 @@
           // Handle the result
           if (result.alreadyCheckedIn) {
             showStatus(
-              `${result.name} already checked in at ${new Date(
-                result.timestamp
-              ).toLocaleString()}`,
+              `${result.name} already checked in at ${formatTimestamp(result.timestamp)}`,
               "already-checked"
             );
           } else if (result.success) {
-            const checkInTime = result.timestamp
-              ? new Date(result.timestamp).toLocaleString()
-              : "just now";
             showStatus(
-              `Successfully checked in ${result.name} at ${checkInTime}`,
+              `Successfully checked in ${result.name} at ${formatTimestamp(result.timestamp)}`,
               "success"
             );
           } else {
