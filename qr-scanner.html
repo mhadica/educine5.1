@@ -301,7 +301,7 @@
 
         // Fetch participant details from the server
         fetch(
-          `https://script.google.com/macros/s/AKfycbyUyAF81pJdrdFFGjBGWilcVhtNZV3GSSICTuMMJ3v0BuBxILN1ktochq6cA8jpQUVA/exec?action=checkAttendance&id=${data}`
+          `https://script.google.com/macros/s/AKfycbyMlygClMiP1N5K94gR_b8XAem7WCTPzTwFUhVO--WkySYBpXRiigUiriYTJ1jhyrQ/exec?action=checkAttendance&id=${data}`
         )
           .then((response) => response.json())
           .then((result) => {
@@ -361,9 +361,10 @@
 
           // First make the POST request to mark attendance
           const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbyUyAF81pJdrdFFGjBGWilcVhtNZV3GSSICTuMMJ3v0BuBxILN1ktochq6cA8jpQUVA/exec",
+            "https://script.google.com/macros/s/AKfycbyMlygClMiP1N5K94gR_b8XAem7WCTPzTwFUhVO--WkySYBpXRiigUiriYTJ1jhyrQ/exec",
             {
               method: "POST",
+              mode: "cors",
               headers: {
                 "Content-Type": "application/json",
               },
@@ -383,7 +384,7 @@
             console.error("Error parsing response:", e);
             // If parsing fails (due to no-cors), make a GET request to verify
             const checkResponse = await fetch(
-              `https://script.google.com/macros/s/AKfycbyUyAF81pJdrdFFGjBGWilcVhtNZV3GSSICTuMMJ3v0BuBxILN1ktochq6cA8jpQUVA/exec?action=checkAttendance&id=${currentScanResult}`
+              `https://script.google.com/macros/s/AKfycbyMlygClMiP1N5K94gR_b8XAem7WCTPzTwFUhVO--WkySYBpXRiigUiriYTJ1jhyrQ/exec?action=checkAttendance&id=${currentScanResult}`
             );
             result = await checkResponse.json();
             console.log("Check response:", result);

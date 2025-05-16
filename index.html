@@ -279,11 +279,121 @@
                 </div>
             </section>
             <!-- revolution slider close -->
+<!-- Job Fair Announcement Ticker -->
+<!-- Job Fair Announcement Ticker -->
+<section id="job-fair-ticker" class="ticker-section gradient-to-right">
+    <div class="ticker-container">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+            </div>
+            <!-- Duplicate for seamless looping -->
+            <div class="ticker-content">
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+                <span class="ticker-item">
+                    <i class="fa fa-briefcase ticker-icon"></i>
+                    Job Fair @ Educine : 17th May 2025 8 AM - 8 PM
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
 
-            
+<!-- CSS -->
+<style>
+    .ticker-section {
+        width: 100%;
+        overflow: hidden;
+        padding: 15px 0;
+        margin: 0;
+        position: relative;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: #222; /* just to make the glow pop */
+    }
+
+    .ticker-container {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .ticker-wrapper {
+        display: flex;
+        width: max-content;
+        animation: ticker-loop 30s linear infinite;
+    }
+
+    .ticker-content {
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .ticker-item {
+        margin-right: 60px;
+    }
+
+    .ticker-icon {
+        margin: 0 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes ticker-loop {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .ticker-wrapper:hover {
+        animation-play-state: paused;
+    }
+
+    .ticker-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+        pointer-events: none;
+        mix-blend-mode: overlay;
+    }
+</style>
 
             <!-- Event Timer Section -->
-            <section id="section-event-timer" aria-label="section">
+            <!-- <section id="section-event-timer" aria-label="section">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-8">
@@ -297,7 +407,7 @@
                         
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- section begin -->
             <section id="section-about" data-bgimage="url(images-event/bg/1.png) fixed no-repeat">
