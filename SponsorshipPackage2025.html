@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Be a Partner @ Educine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="canonical" href="https://educine.github.io/Sponsorship-Packages-2025" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/jpreloader.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/plugin.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.theme.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css">
+
+    <!-- custom background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+
+    <!-- color scheme -->
+    <link rel="stylesheet" href="css/colors/magenta.css" type="text/css" id="colors">
+    <link rel="stylesheet" href="css/color.css" type="text/css">
+
+    <!-- load fonts -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="fonts/et-line-font/style.css" type="text/css">
+    
+    <!-- custom font -->
+    <link rel="stylesheet" href="css/font-style.css" type="text/css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: "Rubik", Arial, sans-serif;
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4, h5, h6, 
+        .btn, a.btn, .btn-line, a.btn-line,
+        .pricing-box h3, .pricing-box .price,
+        .view-more-btn, .heading-container h2 {
+            font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+        
+        /* Update styles to match first box exactly */
+        .pricing-features {
+            position: relative;
+            padding: 30px 15px;
+            height: 320px;
+            overflow: hidden;
+            background-color: transparent;
+        }
+        
+        .view-more {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        
+        .feature-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 0.9) 70%, rgba(30, 30, 30, 1) 100%);
+        }
+        
+        .pricing-features ul {
+            color: #fff;
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 15px;
+            margin-bottom: 40px;
+            background-color: transparent;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .pricing-features ul::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .pricing-features ul::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        
+        .pricing-features ul::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Add silver box animation */
+        .silver-box {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .silver-box::before {
+            content: '';
+            position: absolute;
+            top: -150%;
+            left: -50%;
+            width: 200%;
+            height: 400%;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(192, 192, 192, 0.1),
+                rgba(192, 192, 192, 0.2),
+                rgba(192, 192, 192, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shimmer 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Add gold box animation */
+        .golden-box {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .golden-box::before {
+            content: '';
+            position: absolute;
+            top: -150%;
+            left: -50%;
+            width: 200%;
+            height: 400%;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(255, 215, 0, 0.1),
+                rgba(255, 215, 0, 0.2),
+                rgba(255, 215, 0, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shimmer 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Add secondary shimmer effect */
+        .silver-box::after,
+        .golden-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(
+                circle at center,
+                transparent 0%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.05) 100%
+            );
+            animation: pulse 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: rotate(45deg) translateY(-100%);
+            }
+            50% {
+                transform: rotate(45deg) translateY(100%);
+            }
+            100% {
+                transform: rotate(45deg) translateY(-100%);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+                transform: scale(0.95);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 0.3;
+                transform: scale(0.95);
+            }
+        }
+
+        /* Add border glow effect */
+        .silver-box {
+            box-shadow: 0 0 20px rgba(192, 192, 192, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .golden-box {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .silver-box:hover,
+        .golden-box:hover {
+            box-shadow: 0 0 30px rgba(192, 192, 192, 0.4);
+        }
+
+        .golden-box:hover {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+        
+        .view-more-btn i {
+            animation: bounce 2s infinite alternate;
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="de_light">
+    <div id="wrapper">
+        <!-- header begin -->
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="index.html">
+                                <img class="logo nav-logo" src="images/educine logo light.png" alt="">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <div class="header-extra">
+                            <div class="v-center">
+                                <span id="b-menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- mainmenu begin -->
+                        <ul id="mainmenu" class="ms-2">
+                            <li><a href="index.html">Home<span></span></a></li>
+                            <li><a href="index.html#section-about">About<span></span></a></li>
+                            <li><a href="gallery.html">Gallery<span></span></a></li>
+                        </ul>
+                        <!-- mainmenu close -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <!-- section begin -->
+            <section id="section-pricing" class="text-light no-top no-bottom" data-stellar-background-ratio=".2">
+                <div class="overlay-bg pt60 pb60" style="background: linear-gradient(135deg, #5e2994 0%, #a035b0 50%, #e91e63 100%);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div style="padding-top: 60px;"></div>
+                                <div class="heading-container" style="position: relative; display: inline-block;">
+                                    <div class="price-symbols-animation"></div>
+                                    <h2 style="position: relative; z-index: 2;">Be a Partner @ Educine</h2>
+                                </div>
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <!-- Platinum Edu-Partner box -->
+                            <div class="col-lg-5 col-md-6 col-sm-12 mx-3 mb-4">
+                                <div class="pricing-box pricing-featured golden-box" style="background-color: rgba(30, 30, 30, 0.85); border: 1px solid rgba(255, 215, 0, 0.5); border-radius: 10px; overflow: hidden; height: 620px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    <div class="pricing-title" style="background: linear-gradient(to right, rgba(212, 175, 55, 0.7), rgba(255, 215, 0, 0.7)); padding: 20px 0;">
+                                        <h3 style="color: #fff; font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Platinum Edu-Partner</h3>
+                                    </div>
+                                    <div class="pricing-price" style="padding: 30px 0; border-bottom: 1px solid rgba(255, 215, 0, 0.3);">
+                                        <div class="pricing-price-inner">
+                                            <span class="currency" style="color: gold;">₹</span>
+                                            <span class="price" style="color: #fff; font-size: 40px; font-weight: bold;">10 Lakhs</span>
+                                            <span class="month" style="color: #fff;">Only</span>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-features" style="padding: 30px 15px; height: 320px; position: relative; overflow: hidden; background-color: transparent;">
+                                        <ul style="color: #fff; list-style-type: none; padding-left: 0; font-size: 15px; margin-bottom: 40px; background-color: transparent;">
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">'Powered by'</strong> title attribution</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Brand Visibility:</strong> Logo on all event materials</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Welcome Arch</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Flex Boards</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Wall Posters</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Risala Weekly (Backpage)</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Risala Update Digital Platform</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Social Media Outreach to 300,000 accounts</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">1 Minute Video in LED Display (10 min interval)</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Booth Space:</strong> 40x10 Sq. Ft dedicated area</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Speaking Opportunities</strong> for career sessions</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Targeted Marketing:</strong> ~1 lakh footfall</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Media Coverage</strong> in press releases</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Advertisement</strong> to 100,000 families</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: gold;">Networking Opportunities</strong> with WEFI organizers</li>
+                                        </ul>
+                                        <div class="feature-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 0.9) 70%, rgba(30, 30, 30, 1) 100%);"></div>
+                                        <div class="view-more" style="position: absolute; bottom: 5px; left: 0; right: 0; text-align: center;">
+                                            <a href="javascript:void(0);" class="view-more-btn" style="color: gold; font-weight: bold; text-decoration: none; font-size: 14px; text-transform: uppercase; display: flex; align-items: center; justify-content: center;">
+                                                View More <i class="fa fa-angle-down" style="margin-left: 5px; animation: bounce 1s infinite alternate;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-action" style="padding: 20px 0 30px 0; background-color: transparent;">
+                                        <a href="https://wa.me/918714151870?text=Hello%20I%20am%20interested%20in%20Platinum%20Edu-Partner%20Program%0Acan%20I%20know%20the%20further%20procedures%20and%20informations" class="btn-custom" style="background: linear-gradient(to right, #D4AF37, #FFD700); color: #fff; border-radius: 5px; padding: 12px 30px; text-transform: uppercase; font-weight: bold; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-shadow: 1px 1px 1px rgba(0,0,0,0.3);">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Gold Knowledge Ally box -->
+                            <div class="col-lg-5 col-md-6 col-sm-12 mx-3 mb-4">
+                                <div class="pricing-box silver-box" style="background-color: rgba(30, 30, 30, 0.85); border: 1px solid rgba(192, 192, 192, 0.5); border-radius: 10px; overflow: hidden; height: 620px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    <div class="pricing-title" style="background: linear-gradient(to right, rgba(192, 192, 192, 0.7), rgba(230, 230, 230, 0.7)); padding: 20px 0;">
+                                        <h3 style="color: #fff; font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Gold Knowledge Ally</h3>
+                                    </div>
+                                    <div class="pricing-price" style="padding: 30px 0; border-bottom: 1px solid rgba(192, 192, 192, 0.3);">
+                                        <div class="pricing-price-inner">
+                                            <span class="currency" style="color: silver;">₹</span>
+                                            <span class="price" style="color: #fff; font-size: 40px; font-weight: bold;">5 Lakhs</span>
+                                            <span class="month" style="color: #fff;">Only</span>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-features" style="padding: 30px 15px; height: 320px; position: relative; overflow: hidden; background-color: transparent;">
+                                        <ul style="color: #fff; list-style-type: none; padding-left: 0; font-size: 15px; margin-bottom: 40px; background-color: transparent;">
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: silver;">'Co-Sponsored by'</strong> title attribution</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: silver;">Brand Visibility:</strong> Logo on all event materials</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Flex Boards</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Wall Posters</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Branding in E-Posters and Brochures</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Risala Weekly (Back inner page)</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Risala Update Digital Platform</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Social Media Outreach to 300,000 accounts</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">30-second Video in LED Display (20 min intervals)</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: silver;">Booth Space:</strong> 20x10 Sq. Ft dedicated area</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: silver;">Speaking Opportunities</strong> for career sessions</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: silver;">Advertisement</strong> to 100,000 families</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;"><strong style="color: silver;">Networking Opportunities</strong> with WEFI organizers</li>
+                                        </ul>
+                                        <div class="feature-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 0.9) 70%, rgba(30, 30, 30, 1) 100%);"></div>
+                                        <div class="view-more" style="position: absolute; bottom: 5px; left: 0; right: 0; text-align: center;">
+                                            <a href="javascript:void(0);" class="view-more-btn" style="color: silver; font-weight: bold; text-decoration: none; font-size: 14px; text-transform: uppercase; display: flex; align-items: center; justify-content: center;">
+                                                View More <i class="fa fa-angle-down" style="margin-left: 5px; animation: bounce 1s infinite alternate;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-action" style="padding: 20px 0 30px 0; background-color: transparent;">
+                                        <a href="https://wa.me/918714151870?text=Hello%20I%20am%20interested%20in%20Gold%20Knowledge%20Ally%20Program%0Acan%20I%20know%20the%20further%20procedures%20and%20informations" class="btn-custom" style="background: linear-gradient(to right, #C0C0C0, #E6E6E6); color: #333; border-radius: 5px; padding: 12px 30px; text-transform: uppercase; font-weight: bold; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-shadow: 1px 1px 1px rgba(255,255,255,0.3);">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <!-- Premium Career Hub box -->
+                            <div class="col-lg-5 col-md-6 col-sm-12 mx-3 mb-4">
+                                <div class="pricing-box" style="background-color: rgba(30, 30, 30, 0.85); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 10px; overflow: hidden; height: 620px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    <div class="pricing-title" style="background-color: rgba(255, 255, 255, 0.1); padding: 20px 0;">
+                                        <h3 style="color: #fff; font-size: 24px; font-weight: bold;">Premium Career Hub</h3>
+                                    </div>
+                                    <div class="pricing-price" style="padding: 30px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                        <div class="pricing-price-inner">
+                                            <span class="currency" style="color: #fff;">₹</span>
+                                            <span class="price" style="color: #fff; font-size: 40px; font-weight: bold;">50K</span>
+                                            <span class="month" style="color: #fff;">Only</span>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-features" style="padding: 30px 15px; height: 320px; position: relative; overflow: hidden; background-color: transparent;">
+                                        <ul style="color: #fff; list-style-type: none; padding-left: 0; font-size: 15px; margin-bottom: 40px; background-color: transparent;">
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">3x3 m Booth</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">LCD TV</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">1 Desk and 4 Chairs</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">1 Plug point</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Food and Refreshments</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Direct connection with students</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Premium location</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pricing-action" style="padding: 20px 0 30px 0; background-color: transparent;">
+                                        <a href="https://wa.me/918714151870?text=Hello%20I%20am%20interested%20in%20Premium%20Career%20Hub%20Program%0Acan%20I%20know%20the%20further%20procedures%20and%20informations" class="btn-custom" style="background-color: #e91e63; color: #fff; border-radius: 5px; padding: 12px 30px; text-transform: uppercase; font-weight: bold; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Smart Learning Spot box -->
+                            <div class="col-lg-5 col-md-6 col-sm-12 mx-3 mb-4">
+                                <div class="pricing-box" style="background-color: rgba(30, 30, 30, 0.85); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 10px; overflow: hidden; height: 620px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    <div class="pricing-title" style="background-color: rgba(255, 255, 255, 0.1); padding: 20px 0;">
+                                        <h3 style="color: #fff; font-size: 24px; font-weight: bold;">Smart Learning Spot</h3>
+                                    </div>
+                                    <div class="pricing-price" style="padding: 30px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                        <div class="pricing-price-inner">
+                                            <span class="currency" style="color: #fff;">₹</span>
+                                            <span class="price" style="color: #fff; font-size: 40px; font-weight: bold;">25K</span>
+                                            <span class="month" style="color: #fff;">Only</span>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-features" style="padding: 30px 15px; height: 320px; position: relative; overflow: hidden; background-color: transparent;">
+                                        <ul style="color: #fff; list-style-type: none; padding-left: 0; font-size: 15px; margin-bottom: 40px; background-color: transparent;">
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Common Stalls without partition</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">1 Desk and 4 Chairs</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">1 Plug point</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Food and Refreshments</li>
+                                            <li style="padding: 8px 0; color: #fff; background-color: transparent;">Connect with attendees</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pricing-action" style="padding: 20px 0 30px 0; background-color: transparent;">
+                                        <a href="https://wa.me/918714151870?text=Hello%20I%20am%20interested%20in%20Smart%20Learning%20Spot%20Program%0Acan%20I%20know%20the%20further%20procedures%20and%20informations" class="btn-custom" style="background-color: #e91e63; color: #fff; border-radius: 5px; padding: 12px 30px; text-transform: uppercase; font-weight: bold; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- Gallery Slider Section -->
+            <section id="section-gallery" class="text-light" style="background: linear-gradient(135deg, #5e2994 0%, #a035b0 50%, #e91e63 100%); padding: 60px 0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 style="color: #fff; margin-bottom: 40px;">Event Gallery</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="horizontal-gallery">
+                                <div class="gallery-track">
+                                    <!-- First set of images -->
+                                    <div class="gallery-item">
+                                        <img src="images/100.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/101.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/102.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/103.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/104.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/105.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/106.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/107.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/108.jpg" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/109.jpg" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/110.jpg" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/115.JPG" alt="Event Photo">
+                                    </div>
+                                    <!-- Duplicate set of images for seamless loop -->
+                                    <div class="gallery-item">
+                                        <img src="images/100.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/101.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/102.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/103.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/104.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/105.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/106.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/107.JPG" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/108.jpg" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/109.jpg" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/110.jpg" alt="Event Photo">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/115.JPG" alt="Event Photo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <style>
+                .horizontal-gallery {
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                }
+                
+                .gallery-track {
+                    display: flex;
+                    gap: 20px;
+                    animation: scroll 80s linear infinite;
+                    padding: 20px 0;
+                }
+                
+                .gallery-item {
+                    flex: 0 0 300px;
+                    height: 200px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                    transition: transform 0.3s ease;
+                }
+                
+                .gallery-item:hover {
+                    transform: scale(1.05);
+                }
+                
+                .gallery-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(calc(-300px * 12 - 20px * 11));
+                    }
+                }
+                
+                /* Add gradient overlays on the sides */
+                .horizontal-gallery::before,
+                .horizontal-gallery::after {
+                        content: '';
+                        position: absolute;
+                    top: 0;
+                    width: 100px;
+                    height: 100%;
+                    z-index: 2;
+                }
+                
+                .horizontal-gallery::before {
+                    left: 0;
+                    background: linear-gradient(to right, rgba(94, 41, 148, 1), rgba(94, 41, 148, 0));
+                }
+                
+                .horizontal-gallery::after {
+                    right: 0;
+                    background: linear-gradient(to left, rgba(94, 41, 148, 1), rgba(94, 41, 148, 0));
+                }
+            </style>
+
+        <!-- footer begin -->
+        <footer class="style-2">
+            <div class="container">
+                <div class="row align-items-middle">
+                    <div class="col-md-3">
+                        <img src="images/educine logo light.png" class="logo-small logo-footer" alt=""><img
+                            src="images/wefi logo on.png" class="logo-small logo-footer-we" alt="">
+                    </div>
+
+                    <div class="col-md-6">
+                        Wisdom Education Foundation of India
+                        Students' Center, Calicut- 04
+                        <a href="https://wefionline.in/" class="id-color footer-link">www.wefionline.in</a>
+                    </div>
+
+                    <div class="col-md-3 text-right">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/wefikerala"><i class="fa fa-facebook fa-lg"></i></a>
+                            <a href="https://www.instagram.com/educine_career_expo"><i
+                                    class="fa fa-instagram fa-lg"></i></i></a>
+                            <a href="https://wefionline.in/"><i class="fa fa-google-plus fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" id="back-to-top" class="custom-1"></a>
+        </footer>
+        <!-- footer close -->
+        </div>
+        <!-- content close -->
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="https://kit.fontawesome.com/2dc83182b1.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jpreLoader.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.scrollto.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/video.resize.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewMoreBtns = document.querySelectorAll('.view-more-btn');
+            
+            // Special handling for the first box (Platinum Edu-Partner)
+            const firstBox = document.querySelector('.pricing-box.pricing-featured');
+            if (firstBox) {
+                const firstFeaturesDiv = firstBox.querySelector('.pricing-features');
+                const firstFeatureList = firstFeaturesDiv.querySelector('ul');
+                
+                // Enable scrolling for the first box by default
+                firstFeatureList.style.maxHeight = '250px';
+                firstFeatureList.style.overflowY = 'auto';
+            }
+            
+            viewMoreBtns.forEach(btn => {
+                // Initialize state
+                let isExpanded = false;
+                
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent any default behavior
+                    
+                    const featuresDiv = this.closest('.pricing-features');
+                    const featureList = featuresDiv.querySelector('ul');
+                    const overlay = featuresDiv.querySelector('.feature-overlay');
+                    const icon = this.querySelector('i');
+                    const pricingBox = this.closest('.pricing-box');
+                    
+                    if (!isExpanded) {
+                        // Expand
+                        featureList.style.maxHeight = 'none';
+                        overlay.style.display = 'none';
+                        this.innerHTML = 'View Less <i class="fa fa-angle-up" style="margin-left: 5px; animation: bounce 2s infinite alternate;"></i>';
+                        
+                        // Calculate and set new heights
+                        const contentHeight = featureList.scrollHeight;
+                        const additionalHeight = Math.min(280, contentHeight - 200);
+                        pricingBox.style.height = (620 + additionalHeight) + 'px';
+                        featuresDiv.style.height = (320 + additionalHeight) + 'px';
+                    } else {
+                        // Collapse
+                        featureList.style.maxHeight = '250px';
+                        overlay.style.display = 'block';
+                        this.innerHTML = 'View More <i class="fa fa-angle-down" style="margin-left: 5px; animation: bounce 2s infinite alternate;"></i>';
+                        pricingBox.style.height = '620px';
+                        featuresDiv.style.height = '320px';
+                    }
+                    
+                    // Toggle state
+                    isExpanded = !isExpanded;
+                });
+            });
+
+            // Add animated price symbols background for the heading
+            function createPriceSymbolsAnimation() {
+                const symbols = ['₹', '$', '€', '£', '¥'];
+                const container = document.querySelector('.price-symbols-animation');
+                
+                if (!container) return;
+                
+                // Create symbols
+                for (let i = 0; i < 15; i++) {
+                    const symbol = document.createElement('span');
+                    symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                    symbol.style.position = 'absolute';
+                    symbol.style.fontSize = Math.random() * 20 + 10 + 'px';
+                    symbol.style.opacity = Math.random() * 0.5 + 0.3;
+                    symbol.style.left = Math.random() * 100 + '%';
+                    symbol.style.top = Math.random() * 100 + '%';
+                    symbol.style.transform = 'translate(-50%, -50%)';
+                    symbol.style.animation = `float ${Math.random() * 10 + 10}s linear infinite`;
+                    symbol.style.animationDelay = `${Math.random() * 5}s`;
+                    container.appendChild(symbol);
+                }
+            }
+
+            // Add the animation keyframes
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0% {
+                        transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                    100% {
+                        transform: translate(-50%, -50%) rotate(360deg);
+                    }
+                }
+                .price-symbols-animation {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+            `;
+            document.head.appendChild(style);
+
+            createPriceSymbolsAnimation();
+        });
+    </script>
+</body>
+</html> 

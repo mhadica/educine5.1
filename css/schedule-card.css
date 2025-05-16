@@ -1,0 +1,136 @@
+/* Custom Schedule Section Styles */
+                .schedule-tabs .nav-pills .nav-link {
+                    background: rgba(30,30,30,0.8);
+                    color: #fff;
+                    border-radius: 30px;
+                    margin: 0 10px;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    padding: 12px 28px;
+                    transition: background 0.3s, color 0.3s;
+                }
+                .schedule-tabs .nav-pills .nav-link.active {
+                    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+                    color: #fff;
+                    box-shadow: 0 4px 16px rgba(106,17,203,0.15);
+                }
+                .schedule-card.card {
+                    background: rgba(24,24,32,0.95);
+                    padding: 20px;
+                    border: none;
+                    width: 120%;
+                    border-radius: 18px;
+                    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.18);
+                    transition: transform 0.2s, box-shadow 0.2s;
+                    min-height: 340px;
+                }
+                .schedule-card.card:hover {
+                    transform: translateY(-8px) scale(1.03);
+                    box-shadow: 0 8px 32px 0 rgba(106,17,203,0.18);
+                }
+                .schedule-time {
+                    font-size: 1.1rem;
+                    color: #6a11cb;
+                    font-weight: 700;
+                }
+                .schedule-speaker strong {
+                    color: #fff;
+                }
+                .schedule-speakers {
+                    display: flex;
+                    flex-direction: column;
+                }
+                @media (min-width: 768px) {
+                    .schedule-speakers {
+                        flex-direction: row;
+                    }
+                }
+                .schedule-extra .badge {
+                    margin-right: 6px;
+                    font-size: 0.85em;
+                }
+                .schedule-speaker-card {
+                    background: rgba(34, 34, 44, 0.95);
+                    border: 1px solid #232336;
+                    border-radius: 12px;
+                    min-width: 0;
+                    min-height: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    transition: box-shadow 0.2s;
+                }
+                .schedule-speaker-card .fw-bold {
+                    font-size: 1.08rem;
+                    margin-bottom: 0.25rem;
+                }
+                .schedule-speaker-card .text-muted {
+                    font-size: 0.95rem;
+                }
+                @media (max-width: 767px) {
+                    .schedule-speakers {
+                        flex-direction: column !important;
+                    }
+                    .schedule-speaker-card {
+                        margin-bottom: 10px;
+                    }
+                }
+                @media (max-width: 991px) {
+                    .schedule-card.card { min-height: 280px; }
+                    .schedule-scroll-row > .col-md-6, .schedule-scroll-row > .col-md-4, .schedule-scroll-row > .col-md-3 {
+                        min-width: 80vw;
+                        max-width: 90vw;
+                        flex: 0 0 80vw;
+                    }
+                    .schedule-scroll-row {
+                        gap: 24px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .schedule-tabs .nav-pills .nav-link {
+                        font-size: 1rem;
+                        padding: 10px 12px;
+                        margin: 0 4px 8px 4px;
+                    }
+                    .schedule-card.card {
+                        min-height: 220px;
+                        width: 100%;
+                        padding: 12px;
+                    }
+                    .schedule-scroll-row > .col-md-6, .schedule-scroll-row > .col-md-4, .schedule-scroll-row > .col-md-3 {
+                        min-width: 95vw;
+                        max-width: 98vw;
+                        flex: 0 0 95vw;
+                    }
+                    .schedule-scroll-row {
+                        gap: 16px;
+                        padding-left: 4px;
+                        padding-right: 4px;
+                    }
+                }
+                .schedule-scroll-row {
+                    flex-wrap: nowrap !important;
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                    gap: 100px;
+                    width: 100vw;
+                    max-width: 100vw;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    padding-left: 24px;
+                    padding-right: 24px;
+                    scrollbar-width: none; /* Firefox */
+                }
+                .schedule-scroll-row::-webkit-scrollbar {
+                    display: none; /* Chrome, Safari, Opera */
+                }
+                .schedule-scroll-row > .col-md-6, .schedule-scroll-row > .col-md-4, .schedule-scroll-row > .col-md-3 {
+                    min-width: 440px;
+                    max-width: 520px;
+                    flex: 0 0 440px;
+                    margin-right: 20px; 
+                    /* Remove margin-right, use gap instead */
+                }
