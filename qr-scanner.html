@@ -84,7 +84,7 @@
         color: #eab308;
         border: 1px solid #eab308;
       }
-      
+
       #result-container {
         transition: all 0.3s ease;
       }
@@ -289,19 +289,19 @@
         // First show the ID while we fetch additional details
         document.getElementById("scan-id").textContent = data;
         document.getElementById("scan-name").textContent = "Loading...";
-        
+
         // Determine participant type based on ID prefix
         let participantType = "";
         if (data.startsWith("ESU")) participantType = "Student";
         else if (data.startsWith("EJO")) participantType = "Job Seeker";
         else if (data.startsWith("ESP")) participantType = "Sponsor";
         document.getElementById("scan-type").textContent = participantType;
-        
+
         resultContainer.classList.remove("hidden");
 
         // Fetch participant details from the server
         fetch(
-          `https://script.google.com/macros/s/AKfycbzocHy05SYImT29VeSFgTX7qBail6MjjIlNFq2heKs8piOADpPPJkwD0VfX7L-fRiyH/exec?action=checkAttendance&id=${data}`
+          `https://script.google.com/macros/s/AKfycbyUyAF81pJdrdFFGjBGWilcVhtNZV3GSSICTuMMJ3v0BuBxILN1ktochq6cA8jpQUVA/exec?action=checkAttendance&id=${data}`
         )
           .then((response) => response.json())
           .then((result) => {
@@ -313,7 +313,9 @@
 
               if (result.alreadyCheckedIn) {
                 showStatus(
-                  `${result.name} already checked in at ${formatTimestamp(result.timestamp)}`,
+                  `${result.name} already checked in at ${formatTimestamp(
+                    result.timestamp
+                  )}`,
                   "already-checked"
                 );
               } else {
@@ -359,7 +361,7 @@
 
           // First make the POST request to mark attendance
           const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbzocHy05SYImT29VeSFgTX7qBail6MjjIlNFq2heKs8piOADpPPJkwD0VfX7L-fRiyH/exec",
+            "https://script.google.com/macros/s/AKfycbyUyAF81pJdrdFFGjBGWilcVhtNZV3GSSICTuMMJ3v0BuBxILN1ktochq6cA8jpQUVA/exec",
             {
               method: "POST",
               headers: {
@@ -381,7 +383,7 @@
             console.error("Error parsing response:", e);
             // If parsing fails (due to no-cors), make a GET request to verify
             const checkResponse = await fetch(
-              `https://script.google.com/macros/s/AKfycbzocHy05SYImT29VeSFgTX7qBail6MjjIlNFq2heKs8piOADpPPJkwD0VfX7L-fRiyH/exec?action=checkAttendance&id=${currentScanResult}`
+              `https://script.google.com/macros/s/AKfycbyUyAF81pJdrdFFGjBGWilcVhtNZV3GSSICTuMMJ3v0BuBxILN1ktochq6cA8jpQUVA/exec?action=checkAttendance&id=${currentScanResult}`
             );
             result = await checkResponse.json();
             console.log("Check response:", result);
@@ -390,12 +392,16 @@
           // Handle the result
           if (result.alreadyCheckedIn) {
             showStatus(
-              `${result.name} already checked in at ${formatTimestamp(result.timestamp)}`,
+              `${result.name} already checked in at ${formatTimestamp(
+                result.timestamp
+              )}`,
               "already-checked"
             );
           } else if (result.success) {
             showStatus(
-              `Successfully checked in ${result.name} at ${formatTimestamp(result.timestamp)}`,
+              `Successfully checked in ${result.name} at ${formatTimestamp(
+                result.timestamp
+              )}`,
               "success"
             );
           } else {
