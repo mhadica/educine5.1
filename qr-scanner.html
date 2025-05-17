@@ -1,29 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>QR Scanner</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Scanner</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+      }
 
-    iframe {
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 500px;
-      height: 600px;
-    }
-  </style>
-</head>
-<body>
-  <iframe src="https://script.google.com/macros/s/AKfycbz_GlSuqVCTMHS2ZG5XXh0karPEb6qtufZEzXIToaMZTdzX3l3XfOswMd2sNA2OPm0/exec" allow="camera; microphone"></iframe>
-</body>
+      iframe {
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 500px;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe
+      src="https://script.google.com/macros/s/AKfycbzFd3GQGmA_8KO8zMqb3uV15kRYQKLrBVkLY2cc9WYLPqa3IiuYx3W7uM9fU7Drglk/exec"
+      allow="camera; microphone"
+    ></iframe>
+  </body>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #A8BDD3;
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #2D90CD;
+        font-size: 1.6em;
+      }
+
+      #qr-reader {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+      }
+
+      #scanned-id {
+        font-size: 1.2em;
+        margin-top: 10px;
+        color: #1E54A4;
+        word-break: break-word;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 1em;
+        background-color: #5C6CAC;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1E54A4;
+      }
+
+      .status {
+        margin-top: 18px;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+
+      @media (max-width: 500px) {
+        button {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Educine QR Attendance</h2>
+    <div id="qr-reader"></div>
+    <div id="scanned-id"></div>
+    <button id="confirm-btn" style="display:none;">Confirm Attendance</button>
+    <div class="status" id="status-msg"></div>
+
+    <script>
+      let currentId = "";
+
+      function onScanSuccess(decodedText) {
+        currentId = decodedText;
+        document.getElementById("scanned-id").textContent = "Scanned ID: " + decodedText;
+        document.getElementById("confirm-btn").style.display = "inline-block";
+        document.getElementById("status-msg").textContent = "";
+      }
+
+      const html5QrCode = new Html5Qrcode("qr-reader");
+      html5QrCode.start(
+        { facingMode: "environment" },
+        { fps: 10, qrbox: { width: 250, height: 250 } },
+        onScanSuccess
+      ).catch(err => console.error(err));
+
+      document.getElementById("confirm-btn").addEventListener("click", () => {
+        google.script.run.withSuccessHandler(response => {
+          const statusEl = document.getElementById("status-msg");
+          if (response.success) {
+            statusEl.style.color = "green";
+            statusEl.textContent = "✅ " + response.message;
+          } else {
+            statusEl.style.color = "darkred";
+            statusEl.textContent = "❗ " + response.message;
+          }
+        }).updateAttendance(currentId);
+      });
+    </script>
+  </body>
+</html> -->
